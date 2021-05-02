@@ -1,0 +1,174 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Verdana, "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+	color: #333;
+}
+#header a {
+	text-transform: uppercase;
+	color: #666;
+	text-decoration: none;
+	font-size: .8em;
+}
+
+#wrapper h1#titleprint {
+	display: none;
+	}
+	
+.navList li h2 {
+	text-transform: uppercase;
+	color: #416796;
+	font-size: 0.75em;
+	margin-top: -5px;
+	font-weight: bold;
+}
+.navList li {
+	display: block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: verdana, Arial, Helvetica, sans-serif;
+}
+.navList li a {
+	color: #333;
+	text-decoration: none;
+	font-size: .65em;
+}
+.navList li a:hover {
+	border-bottom: 1px dotted #666;
+}
+#footer {
+	font-size: .6em;
+	line-height: 1.4em;
+}
+#footer #applyNow {
+	font-size: 1.1em;
+	text-align: right;
+}
+#footer a {
+	color: #416796;
+	text-decoration: none;
+}
+#footer a:hover, #header #topNav a:hover {
+	text-decoration: none;
+	border-bottom: 1px dotted #416796;
+}
+#facultyfooter {
+	font-size: .6em;
+	line-height: 1.4em;
+}
+
+#facultyfooter a {
+	color: #416796;
+	text-decoration: none;
+}
+#wrapper #shadowMid #content #bodyCopy h4 {
+	width: 100%;
+	clear: both;
+	padding-top: 7px;
+	padding-bottom: 3px;
+	color: #999999;
+	margin-top: 20px;
+	margin-bottom: 3px;
+	font-weight: normal;
+}
+
+#wrapper #shadowMid #content #bodyCopy td {
+	font-size: .8em;
+	padding: 8px;
+	line-height:normal;
+	
+}
+
+#content #bodyCopy #tabs li{
+	margin: 8px 0 0 10px;
+	font-size: 1em;
+	
+}
+#content #bodyCopy #tabs li a {
+	font-size: .8em;
+}
+#content #bodyCopy ul li{
+	font-size: 0.8em;
+	list-style-type: square;
+	line-height: 1.5em;
+	text-indent: 2px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	list-style-type:none;
+}
+
+#contentwide #bodyCopy ul li{
+	font-size: 0.8em;
+	list-style-type: square;
+	line-height: 1.5em;
+	text-indent: 2px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	list-style-type:none;
+}
+#content #bodyCopy h1{
+	font-size: 1.4em;
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#003;
+	margin: 1px 0 8px 0;
+	font-weight:bold;
+}
+#content #bodyCopy h2{
+	font-size: 1.1em;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #633;
+	margin: 15px 0 0 0;
+	border-bottom:thin #666 solid;
+	font-weight:bold;
+}
+
+#content #bodyCopy h3{
+	font-size: 0.61em;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #066;
+	margin: 1px 0 8px 0;
+	font-weight:bold;
+}
+#content blockquote p { font-size: .8em; margin:3px 15px 3px 25px; padding-left: 5px; border-left: thin #999 solid; }
+
+#content #bodyCopy .tabs-container li p {
+	font-size: 0.9em;
+}
+.hilite {
+	background-color: #CC9;
+	padding: 2px;
+}
+.cookie {
+	font-family:Verdana, Geneva, sans-serif; 
+	font-size:12px; 
+	font-weight: 500; 
+	margin: 3px 0 12px 3px; 
+	color:#333;}
+	
+	#contentwide #bodyCopy h1{
+	font-size: 1.4em;
+	font-family: Tahoma, Geneva, sans-serif;
+	color:#003;
+	margin: 1px 0 8px 0;
+	font-weight:bold;
+}
+#contentwide #bodyCopy h2{
+	font-size: 1.1em;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #633;
+	margin: 15px 0 0 0;
+	border-bottom:thin #666 solid;
+	font-weight:bold;
+}
+
+#contentwide #bodyCopy h3{
+	font-size: 1em;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #066;
+	margin: 1px 0 8px 0;
+	font-weight:bold;
+}
+#contentwide blockquote p { font-size: .8em; margin:3px 15px 3px 25px; padding-left: 5px; border-left: thin #999 solid; }

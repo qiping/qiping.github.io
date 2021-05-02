@@ -1,0 +1,33 @@
+<li> <h3><a href="index.html">Home (Yan)</a></h3></li>
+
+        <li> <h3 class="accordHeader"><a href="#">Projects</a></h3>
+		<ul class="accordContent">
+		<li><a href="#">{Current Research Projects}</a></li>
+		<li> - <a href="NCCP.html">Nevada Climate Control</a></li>
+		<li><a href="#">{Past School Projects}</a></li>
+		<li> - <a href="Surling.html">Surling</a></li>
+		<li> - <a href="CutGlass.html">CutGlass</a></li>
+		<li> - <a href="Coupout.html">Coupout</a></li>
+		<li> - <a href="MissThis.html">MissThis!</a></li>
+		<li> - <a href="Tuxkart.html">1 Switch Super Tuxkart</a></li>
+		<li><a href="#">{Personal Projects}</a></li>
+		<li> - <a href="USDiners.html">US Diners.com</a></li>
+		<li> - <a href="RenoDiners.html">Reno Diners.com</a></li>
+		<li> - <a href="AllDiners.html">All Diners.com</a></li>		
+		<li> - <a href="ChineseName.html">Chinese Name Translator</a></li>
+		<li> - <a href="Chinese.html">Chinese Calligraphy</a></li>
+		<li> - <a href="RestMenu.html">Restaurant Menu</a></li>
+		</ul>
+
+        </li>
+        <li> <h3 class="accordHeader"><a href="ResearchInterests.html">Research Interests</a></h3>
+		<ul class="accordContent">
+		<li> - <a href="SoftwareEng.html">Internet Software Engineering</a></li>
+		<li> - <a href="Database.html">Database Design</a></li>
+		<li> - <a href="Mobile.html">Mobile Technowledge</a></li>
+		</ul>
+        </li>
+        <li> <h3><a href="Classes.html">Classes</a></h3>
+	</li>
+        <li> <h3><a href="Resume.html">Resume</a></h3>
+	</li>

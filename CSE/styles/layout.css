@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#wrapper {
+	margin: -80px auto 0;
+	width: 1120px;
+}
+#shadowMid {
+	background-image: url(/images/shadow_repeat_y.jpg);
+	padding: 0 130px;
+}
+#shadowTop {
+	background-image: url(/images/top_shadow.jpg);
+	width: 1120px;
+	height: 196px;
+	margin-bottom: -47px;
+}
+#shadowBot {
+	background-image: url(/images/bot_shadow.jpg);
+	width: 1120px;
+	height: 196px;
+	margin-top: -10px;
+}
+#header #title a {
+	position: absolute;
+	left: 1px;
+	display: block;
+	top: -61px;
+	background-image: url(/images/title.png);
+	height: 41px;
+	width: 418px;
+	font-size: 0px;
+	color: #FDFDFD;
+}
+#header {
+	position: relative;
+}
+#header #topNav {
+	position: absolute;
+	left: 658px;
+	top: -38px;
+	width: 200px;
+}
+#header #topNav li {
+	float: left;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+#content .navList {
+	float: left;
+	width: 122px;
+	padding-right: 5px;
+	padding-left: 15px;
+	background-image: url(/images/navListSeperator160.jpg);
+	background-repeat: no-repeat;
+	background-position: right 7px;
+	overflow: hidden;
+	min-height: 160px;
+	margin: 0px;
+	margin-top:30px;
+}
+#content {
+	background-image: url(/images/content_grad.jpg);
+	background-color: #FFF;
+	background-position: bottom;
+	background-repeat: repeat-x;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#contentwide {
+	background-color: #FFF;
+	padding: 20px 10px 20px 10px;
+	width: inherit;
+	}
+#content #lastNavList {
+	background-image: none;
+}
+#footer {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+#footer #applyNow {
+	float: right;
+	margin-top: 17px;
+}
+#footer #contactInfo {
+	float: left;
+
+}
+
+#footer #facultyContact {
+	margin: 15px 8px 8px 8px;
+}
+
+#facultyfooter {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 20px;
+	padding-left: 10px;
+	background-color:#dbdbdb;
+}
+
+#facultyfooter #contactInfo {
+	float: left;
+
+}
+
+#facultyfooter #facultyContact {
+	margin: 15px 8px 8px 8px;
+}
+#bodyCopy #tabs li{
+	display: block;
+	float: left;
+	border: 1px solid #999;
+	border-bottom: none;
+	margin: 10px 8px 0 0;
+	background: #FFF; 
+}
+
+#wrapper #bodyCopy #tabs li a {
+	padding: 8px;
+	display:block;
+	font-size: .8em;
+	color: #333;
+}
+#bodyCopy #tabs li a:hover {
+	text-decoration:none;
+}
+#wrapper #bodyCopy #tabs li.selected {
+	background-color: #003;
+	padding: 4px 15px;
+	margin: 0 10px 0 10px;
+}
+#wrapper #bodyCopy #tabs .selected a {
+	color:#fff;
+	font-size: .9em;
+}
+#bodyCopy #tabs .selected a:hover{
+	background-color: #8AABE1;
+}
+
+#wrapper #shadowMid #content #bodyCopy ul li{
+	list-style:square;
+	margin-left: -5px;
+}
+#bodyCopy .tabs-container {
+	clear: both;
+	border: 1px solid #999;
+	padding: 5px 20px 10px;
+
+}
+#wrapper #shadowMid #content #bodyCopy ol li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 35px;
+	list-style-type: decimal;
+	line-height: 1.5em;
+	font-size: .8em;
+}
+#wrapper #shadowMid #content #bodyCopy blockquote {
+	padding: 10px;
+	border: 1px dotted #CCC;
+	line-height: 1.8em;
+	background-color: #EEE;
+	margin: 5px 0 20px 0;
+	width: 500px;
+}
+#wrapper #shadowMid #content #bodyCopy .tabs-container li {
+	margin: 0px;
+	list-style-type: none;
+}
+.indent { margin-left: 15px; }
+.center { text-align: center; }

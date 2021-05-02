@@ -1,0 +1,5 @@
+# require HTTP 1.1 for POST
+<IfModule mod_rewrite.c>
+	RewriteCond %{THE_REQUEST} ^POST(.*)HTTP/(0\.9|1\.0)$ [NC]
+	RewriteRule .* - [F,L]
+</IfModule>

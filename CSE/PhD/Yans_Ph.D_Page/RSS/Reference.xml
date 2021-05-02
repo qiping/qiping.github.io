@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reference>
+    <item>
+        <authors>
+            <author>
+                <firstname>L</firstname>
+                <lastname>Bigagli</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname>S</firstname>
+                <lastname>Nativi</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname>P</firstname>
+                <lastname>Mazzetti</lastname>
+                <middlename></middlename>
+            </author>
+	     <author>
+                <firstname>G</firstname>
+                <lastname>Villoresi</lastname>
+                <middlename></middlename>
+            </author>
+        </authors>
+        <title>GI-Cat: a Web service for dataset cataloguing based on ISO 19115</title>
+        <conference>
+            <name>Database and Expert Systems Applications</name>
+            <proceding>Proceedings. 15th International Workshop on</proceding>
+            <volume></volume>
+            <date>
+                <month_from>Aug.</month_from>
+                <month_to>Sep.</month_to>
+                <day_from>30</day_from>
+                <day_to>3</day_to>
+                <year_from>2004</year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city></city>
+                <state></state>
+                <country></country>
+            </location>
+            <page_from>846</page_from>
+            <page_to>850</page_to>
+        </conference>
+    </item>
+    <item>
+        <authors>
+            <author>
+                <firstname>Yongguo </firstname>
+                <lastname>Jiang</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname>Lianying </firstname>
+                <lastname>Lu</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname>Zhongwen </firstname>
+                <lastname>Guo</lastname>
+                <middlename></middlename>
+            </author>
+        </authors>
+        <title>Design of Marine Information Metadata and Directory Service System Based on XML</title>
+        <conference>
+            <name>Database Technology and Applications</name>
+            <proceding>2009 First International Workshop on</proceding>
+            <date>
+                <month_from>April </month_from>
+                <month_to></month_to>
+                <day_from>25</day_from>
+                <day_to>26</day_to>
+                <year_from>2009</year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city></city>
+                <state></state>
+                <country></country>
+            </location>
+            <page_from>574</page_from>
+            <page_to>577</page_to>
+        </conference>
+    </item>
+    <item>
+        <authors>
+            <author>
+                <firstname>Juanle </firstname>
+                <lastname>Wang</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname>Shuang </firstname>
+                <lastname>Li</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname>Yunqiang </firstname>
+                <lastname>Zhu</lastname>
+                <middlename></middlename>
+            </author>
+        </authors>
+        <title>Study on the metadata management system technique structure driven by requirements in geosciences data clearinghouse</title>
+        <conference>
+            <name>25th Anniversary IGARSS</name>
+            <proceding>IEEE International Geoscience and Remote Sensing Symposium</proceding>
+            <date>
+                <month_from> </month_from>
+                <month_to></month_to>
+                <day_from></day_from>
+                <day_to></day_to>
+                <year_from>2005</year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city></city>
+                <state></state>
+                <country></country>
+            </location>
+            <page_from>768</page_from>
+            <page_to>771</page_to>
+        </conference>
+    </item>
+    <item>
+        <authors>
+            <author>
+                <firstname> </firstname>
+                <lastname>王卷乐</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname> </firstname>
+                <lastname>孙九林</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname> </firstname>
+                <lastname></lastname>
+                <middlename></middlename>
+            </author>
+        </authors>
+        <title>地球系统科学数据共享标准规范体系研究与应用</title>
+        <conference>
+            <name></name>
+            <proceding>地理科学进展</proceding>
+            <date>
+                <month_from> </month_from>
+                <month_to></month_to>
+                <day_from></day_from>
+                <day_to></day_to>
+                <year_from>2009</year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city></city>
+                <state></state>
+                <country></country>
+            </location>
+            <page_from>839</page_from>
+            <page_to>847</page_to>
+        </conference>
+    </item>
+    <item>, , and . "."  21.1 (): 16-19.
+        <authors>
+            <author>
+                <firstname> </firstname>
+                <lastname>王卷乐</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname> </firstname>
+                <lastname>游松财</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname> </firstname>
+                <lastname>谢传节</lastname>
+                <middlename></middlename>
+            </author>
+        </authors>
+        <title>地学数据共享中的元数据标准结构分析与设计</title>
+        <conference>
+            <name></name>
+            <proceding>地理与地理信息科学</proceding>
+            <date>
+                <month_from> </month_from>
+                <month_to></month_to>
+                <day_from></day_from>
+                <day_to></day_to>
+                <year_from>2005</year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city></city>
+                <state></state>
+                <country></country>
+            </location>
+            <volume>21.1</volume>
+            <page_from>16</page_from>
+            <page_to>19</page_to>
+        </conference>
+    </item>
+    <item>
+        <authors>
+            <author>
+                <firstname>Yaxing </firstname>
+                <lastname>Wei</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname>L </firstname>
+                <lastname>Di</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname>B </firstname>
+                <lastname>Zhao</lastname>
+                <middlename></middlename>
+            </author>
+        </authors>
+        <more_authors>et al.</more_authors>
+        <title>Transformation of HDF-EOS metadata from the ECS model to ISO 19115-based XML</title>
+        <conference>
+            <name></name>
+            <proceding>Computers &amp; geosciences</proceding>
+            <date>
+                <month_from> </month_from>
+                <month_to></month_to>
+                <day_from></day_from>
+                <day_to></day_to>
+                <year_from>2007</year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city></city>
+                <state></state>
+                <country></country>
+            </location>
+            <volume>33.2</volume>
+            <page_from>238</page_from>
+            <page_to>247</page_to>
+        </conference>
+    </item>
+    <item>
+        <authors>
+            <author>
+                <firstname>L </firstname>
+                <lastname>Nance</lastname>
+                <middlename>Kara</middlename>
+            </author>
+            <author>
+                <firstname>Brian </firstname>
+                <lastname>Hay</lastname>
+                <middlename></middlename>
+            </author>
+        </authors>
+        <title>Automatic transformations between geoscience standards using XML</title>
+        <conference>
+            <name></name>
+            <proceding>Computers &amp; geosciences</proceding>
+            <date>
+                <month_from> </month_from>
+                <month_to></month_to>
+                <day_from></day_from>
+                <day_to></day_to>
+                <year_from>2005</year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city></city>
+                <state></state>
+                <country></country>
+            </location>
+            <volume>31.9</volume>
+            <page_from>1165</page_from>
+            <page_to>1174</page_to>
+        </conference>
+    </item>
+    <item>
+        <authors>
+            <author>
+                <firstname>J </firstname>
+                <lastname>Nogueras-Iso</lastname>
+                <middlename></middlename>
+            </author>
+        </authors>
+        <more_authors>et al.</more_authors>
+        <title>Metadata standard interoperability: application in the geographic information domain</title>
+        <conference>
+            <name></name>
+            <proceding>Computers, environment and urban systems</proceding>
+            <date>
+                <month_from> </month_from>
+                <month_to></month_to>
+                <day_from></day_from>
+                <day_to></day_to>
+                <year_from>2004</year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city></city>
+                <state></state>
+                <country></country>
+            </location>
+            <volume>28.6</volume>
+            <page_from>611</page_from>
+            <page_to>634</page_to>
+        </conference>
+    </item>
+    <item>
+        <authors>
+            <author>
+                <firstname>J </firstname>
+                <lastname>Lacasta</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname> </firstname>
+                <lastname></lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname> </firstname>
+                <lastname></lastname>
+                <middlename></middlename>
+            </author>  
+        </authors>
+        <more_authors>et al.</more_authors>
+        <title>Towards the geographic metadata standard interoperability</title>
+        <conference>
+            <name></name>
+            <proceding>Proc. of the 6th AGILE Conference on Geographic Information Science</proceding>
+            <date>
+                <month_from> </month_from>
+                <month_to></month_to>
+                <day_from></day_from>
+                <day_to></day_to>
+                <year_from>2003</year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city></city>
+                <state></state>
+                <country></country>
+            </location>
+            <volume></volume>
+            <page_from></page_from>
+            <page_to></page_to>
+        </conference>
+    </item>
+    <item>
+        <authors>
+            <author>
+                <firstname>A </firstname>
+                <lastname>Manso</lastname>
+                <middlename>M</middlename>
+            </author>
+            <author>
+                <firstname> </firstname>
+                <lastname></lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname> </firstname>
+                <lastname></lastname>
+                <middlename></middlename>
+            </author>  
+        </authors>
+        <more_authors>et al.</more_authors>
+        <title>Automatic metadata extraction from geographic information</title>
+        <conference>
+            <name>AGILE</name>
+            <proceding>7th Conference on Geographic Information Science</proceding>
+            <date>
+                <month_from> </month_from>
+                <month_to></month_to>
+                <day_from></day_from>
+                <day_to></day_to>
+                <year_from>2004</year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city>Heraklion</city>
+                <state></state>
+                <country>Greece</country>
+            </location>
+            <volume></volume>
+            <page_from></page_from>
+            <page_to></page_to>
+        </conference>
+    </item>
+    <!-- 
+<item>
+        <authors>
+            <author>
+                <firstname> </firstname>
+                <lastname></lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname> </firstname>
+                <lastname></lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname> </firstname>
+                <lastname></lastname>
+                <middlename></middlename>
+            </author>  
+        </authors>
+        <more_authors></more_authors>
+        <title></title>
+        <conference>
+            <name></name>
+            <proceding></proceding>
+            <date>
+                <month_from> </month_from>
+                <month_to></month_to>
+                <day_from></day_from>
+                <day_to></day_to>
+                <year_from></year_from>
+                <year_to></year_to>                
+            </date>
+            <location>
+                <city></city>
+                <state></state>
+                <country></country>
+            </location>
+            <volume></volume>
+            <page_from></page_from>
+            <page_to></page_to>
+        </conference>
+    </item>
+ -->
+    </reference>
+    

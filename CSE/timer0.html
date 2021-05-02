@@ -1,0 +1,54 @@
+
+<DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/faculty-template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="stylesheet" type="text/css" href="https://www.cse.unr.edu/styles/ident.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.cse.unr.edu/styles/secondary.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.cse.unr.edu/~yanq/styles/screen.css" media="screen, print"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Computer Science and Engineering | University of Nevada, Reno</title>
+
+<!-- InstanceEndEditable -->
+<script type="text/javascript" src="http://www.cse.unr.edu/scripts/jquery.js"></script>
+<script type="text/javascript" src="http://www.cse.unr.edu/scripts/jquery.accord.js"></script>
+
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="headerImage" -->
+
+<!-- InstanceEndEditable -->
+<SCRIPT LANGUAGE="JavaScript">
+function Start (form) {
+    	
+	var ifHTML = "<fieldset> <legend><b>" + form.Name.value + " " + form.Test.value + " Timer</b> </legend><IFRAME src=\"http://e.ggtimer.com/" + form.Length.value + "%20minutes\" width=\"100%\" height=\"390\"><A href=\"http://e.ggtimer.com/" + form.Length.value + "%20minutes\" target=\"new\" style=\"color:darkred\"> Click here to start the timer. </A></IFRAME></fieldset>";
+
+//	alert (ifHTML);
+	var timer_element = document.getElementById('timer');
+	timer_element.innerHTML = ifHTML;
+}
+
+</SCRIPT>
+</head>
+<body>
+<div id="timer" style="position:fixed; top:150px; left:100px; right:150px;">
+<FORM NAME="myform">
+<fieldset><legend><b>Enter Parameters: </b>[press F11 to enter full screen mode]</legend>
+Course Name: <INPUT TYPE="text" NAME="Name" placeholder="Enter class name here" /><br />
+Test: <datalist id="Test1">
+  <option value="Final Exam">
+  <option value="Midterm Exam">
+  <option value="Quiz">
+  <option value="Other Test">
+</datalist> <INPUT TYPE="text" NAME="Test" placeholder="Test type, i.e. Midterm, Final" /><br />
+Test Length: <INPUT TYPE="number" NAME="Length" VALUE="60" min="10" max="240"> minutes<br />
+<INPUT TYPE="button" NAME="button" Value="Start" onClick="Start(this.form)" >
+</fieldset>
+</FORM>
+        
+</div>
+
+</body>
+</html>

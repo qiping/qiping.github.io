@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Publications>
+    <item>
+        <authors>
+            <author>
+                <firstname>Qiping</firstname>
+                <lastname>Yan</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname>Dianne</firstname>
+                <lastname>Guevarra</lastname>
+                <middlename></middlename>
+            </author>
+            <author>
+                <firstname>Sohei</firstname>
+                <lastname>Okamoto</lastname>
+                <middlename></middlename>
+            </author>
+        </authors>
+        <title>Coupout - A Restaurant Coupon System for Smart Phones</title>
+        <conference>
+            <name>SEDE</name>
+            <proceding>Proceedings of the 21st ISCA International Conference on Software Engineering and Data Engineering</proceding>
+            <date>
+                <month>June</month>
+                <year>2012</year>
+                <day_from>27</day_from>
+                <day_to>29</day_to>
+            </date>
+            <location>
+                <city>Los Angeles</city>
+                <state>CA</state>
+                <country>US</country>
+            </location>
+            <page_from>173</page_from>
+            <page_to>178</page_to>
+        </conference>
+    </item>
+</Publications>
+    
