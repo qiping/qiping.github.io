@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#game-container {
+    width: 95%;
+    max-width: 1100px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #1a73e8;
+}
+
+header p {
+    color: #5f6368;
+    margin-top: 5px;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+#canvas-area {
+    flex: 1;
+    background: #fafafa;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+canvas {
+    display: block;
+    cursor: crosshair;
+}
+
+#controls {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #3c4043;
+}
+
+.target-selector select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #dadce0;
+}
+
+.instructions ul {
+    padding-left: 20px;
+    font-size: 0.9em;
+    color: #5f6368;
+    line-height: 1.5;
+}
+
+.target-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#silhouette-container {
+    flex: 1;
+    border: 2px dashed #dadce0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    min-height: 150px;
+}
+
+#targetHint {
+    color: #9aa0a6;
+    text-align: center;
+    font-size: 0.85em;
+    padding: 10px;
+}
+
+#resetBtn {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+#resetBtn:hover {
+    background-color: #1557b0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #9aa0a6;
+}

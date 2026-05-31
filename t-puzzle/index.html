@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Puzzle (Four-Piece Tangram)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>T-Puzzle Challenge</h1>
+            <p>Can you solve the "T" mystery?</p>
+        </header>
+        
+        <main>
+            <div id="canvas-area">
+                <div id="winMessage" style="display:none; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); background:rgba(26, 115, 232, 0.9); color:white; padding:20px 40px; border-radius:30px; font-size:2em; font-weight:bold; z-index:100; pointer-events:none; box-shadow:0 10px 30px rgba(0,0,0,0.3);">SOLVED!</div>
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+            </div>
+            
+            <aside id="controls">
+                <div class="target-selector">
+                    <h3>Select Target:</h3>
+                    <select id="targetSelect">
+                        <option value="none">None (Free Play)</option>
+                    </select>
+                </div>
+                
+                <div class="instructions">
+                    <h3>How to Play:</h3>
+                    <ul>
+                        <li><strong>Drag</strong> to move pieces.</li>
+                        <li>Press <strong>'R'</strong> to rotate (22.5°) or <strong>Right-Click</strong> to Rotate (45°).</li>
+                        <li>Press <strong>'F'</strong> or <strong>Double-Click</strong> to Flip.</li>
+                    </ul>
+                </div>
+
+                <div class="target-display">
+                    <h3>Target Hint:</h3>
+                    <div id="silhouette-container">
+                        <p id="targetHint">Select a target from the list above. A ghost silhouette will appear on the canvas.</p>
+                    </div>
+                </div>
+
+                <button id="resetBtn">Reset Pieces</button>
+            </aside>
+        </main>
+
+        <footer>
+           <p>&copy; <span id="year"></span> Qiping Yan. All rights reserved.</p>
+        </footer>
+
+<script>
+    // This small script automatically updates the year to 2025 (or current)
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+    </div>
+    <script src="shapes_data.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

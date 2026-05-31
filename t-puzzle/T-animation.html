@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tangram T Assembly</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Courier New', monospace;
+  }
+
+  h1 {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #aaa;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: normal;
+  }
+
+  .stage {
+    position: relative;
+    width: 860px;
+    height: 560px;
+    background: white;
+    border: 1px solid #d0d0d0;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+
+  /* Grid */
+  .stage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,0,0,0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,0.055) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .piece {
+    position: absolute;
+    z-index: 1;
+    /* transform-origin defaults to center of element */
+  }
+
+  .piece svg {
+    display: block;
+    overflow: visible;
+    filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.22));
+    transition: filter 0.3s;
+  }
+
+  .controls {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+  }
+
+  button {
+    padding: 9px 26px;
+    border: 2px solid #333;
+    background: white;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: background 0.15s, color 0.15s;
+  }
+  button:hover { background: #222; color: white; }
+  button.active { background: #222; color: white; }
+</style>
+</head>
+<body>
+
+<h1>Tangram Assembly</h1>
+<div class="stage" id="stage">
+
+  
+  <div class="piece" id="p1">
+    <svg id="svg1" width="320" height="80" viewBox="0 0 320 80">
+      <polygon id="poly1" points="0,0 52,0 80,28 0,28"
+        fill="#3d8f42" stroke="#2a6630" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  
+  <div class="piece" id="p2">
+    <svg id="svg2" width="320" height="300" viewBox="0 0 320 300">
+      <polygon id="poly2"
+        points="320,0 320,80 200,80 200,300 120,300 120,80 0,80"
+        fill="#b5e04a" stroke="#8ab530" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  
+  <div class="piece" id="p3">
+    <svg id="svg3" width="80" height="80" viewBox="0 0 80 80">
+      <polygon id="poly3" points="80,0 80,80 0,80"
+        fill="#c8f050" stroke="#8ab530" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- P4: Small dark green right triangle, lower connector -->
+  <div class="piece" id="p4">
+    <svg id="svg4" width="80" height="60" viewBox="0 0 80 60">
+      <polygon id="poly4" points="0,60 80,0 80,60"
+        fill="#2a6630" stroke="#1d4d22" stroke-width="1.5" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+</div>
+
+<div class="controls">
+  <select id="shapeSelect" style="padding: 9px; border: 2px solid #333; font-family: 'Courier New', monospace; font-size: 12px; font-weight: bold; text-transform: uppercase;">
+  </select>
+  <button id="btnAssemble">▶ Assemble</button>
+  <button id="btnScatter">◀ Scatter</button>
+  <button id="btnLoop">↺ Auto Loop</button>
+</div>
+
+<script src="shapes_data.js"></script>
+<script>
+
+// Populate dropdown with 15 random shapes
+const shapeSelect = document.getElementById('shapeSelect');
+const shapeNames = Object.keys(allShapes).filter(name => name !== 'scattered');
+
+// Shuffle and pick 15
+const shuffled = shapeNames.sort(() => 0.5 - Math.random());
+const selectedShapes = shuffled.slice(0, 15);
+
+// Sort the selected 15 alphabetically for the UI
+selectedShapes.sort().forEach(name => {
+  const option = document.createElement('option');
+  option.value = name;
+  option.textContent = name.replace('shape', 'Shape ');
+  shapeSelect.appendChild(option);
+});
+
+// Set a default selection if available
+if (shapeSelect.options.length > 0) {
+    shapeSelect.selectedIndex = 0;
+}
+
+
+// Redefine all SVG content
+const svgDefs = {
+  p1: {
+    w:320, h:80,
+    polygon: "0,0 104,0 160, 56 0,56",
+    fill: "#AEEA00", stroke: "#8ab530"
+  },
+  p2: {
+    w:320, h:80,
+    polygon: "0,0 160, 0 118, 42 132, 56 56 56",
+    fill: "#2EAD4A", stroke: "#8ab530"
+  },
+  p3: {
+    w:80, h:220,
+    polygon: "0,0 79.2,0 95.6, 16.4 56, 56",
+    fill: "#33AA44", stroke: "#8ab530"
+  },
+  p4: {
+    w:70, h:70,
+    polygon: "0, 0 56, 0 56, 56",
+    fill: "#D6FF00", stroke: "#8ab530"
+  }
+};
+
+// Rebuild SVGs
+for (const [id, def] of Object.entries(svgDefs)) {
+  const el = document.getElementById(id);
+  const svg = el.querySelector('svg');
+  svg.setAttribute('width', def.w);
+  svg.setAttribute('height', def.h);
+  svg.setAttribute('viewBox', `0 0 ${def.w} ${def.h}`);
+  if (def.rect) {
+    svg.innerHTML = `<rect x="0" y="0" width="${def.w}" height="${def.h}" fill="${def.fill}" stroke="${def.stroke}" stroke-width="1.5"/>`;
+  } else {
+    svg.innerHTML = `<polygon points="${def.polygon}" fill="${def.fill}" stroke="${def.stroke}" stroke-width="1.5" stroke-linejoin="round"/>`;
+  }
+}
+
+// Calculate centered coordinates for a given state
+function getCenteredState(state) {
+  if (state === scattered) return state;
+
+  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+
+  // Find the visual bounds based on piece centers to find the overall centroid
+  for (const [id, pos] of Object.entries(state)) {
+    const def = svgDefs[id];
+    const cx = pos.left + def.w / 2;
+    const cy = pos.top + def.h / 2;
+    minX = Math.min(minX, cx);
+    maxX = Math.max(maxX, cx);
+    minY = Math.min(minY, cy);
+    maxY = Math.max(maxY, cy);
+  }
+
+  const offsetX = 430 - (minX + maxX) / 2;
+  const offsetY = 280 - (minY + maxY) / 2;
+
+  const newState = {};
+  for (const [id, pos] of Object.entries(state)) {
+    newState[id] = { ...pos, left: pos.left + offsetX, top: pos.top + offsetY };
+  }
+  return newState;
+}
+
+// Apply styles without transition
+function applyInstant(state) {
+  const centeredState = getCenteredState(state);
+  for (const [id, pos] of Object.entries(centeredState)) {
+    const el = document.getElementById(id);
+    el.style.transition = 'none';
+    el.style.left = pos.left + 'px';
+    el.style.top = pos.top + 'px';
+    const scaleX = pos.scaleX || 1; 
+    el.style.transform = `rotate(${pos.rotate}deg) scaleX(${scaleX})`;
+    el.getBoundingClientRect();
+  }
+}
+
+const EASE = 'cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+const DUR = 1.0;
+
+function animateTo(state, delays = {}) {
+  const centeredState = getCenteredState(state);
+  for (const [id, pos] of Object.entries(centeredState)) {
+    const el = document.getElementById(id);
+    const d = delays[id] || 0;
+    el.style.transition = `left ${DUR}s ${EASE} ${d}s, top ${DUR}s ${EASE} ${d}s, transform ${DUR}s ${EASE} ${d}s`;
+    el.style.left = pos.left + 'px';
+    el.style.top = pos.top + 'px';
+    const scaleX = pos.scaleX || 1; 
+    el.style.transform = `rotate(${pos.rotate}deg) scaleX(${scaleX})`;
+  }
+}
+
+// Start scattered
+applyInstant(scattered);
+
+let looping = false;
+let loopTimer = null;
+const totalDur = (DUR + 0.25) * 1000; // ms to wait before reversing
+
+function loop() {
+  if (!looping) return;
+  const target = allShapes[shapeSelect.value] || assembled;
+  animateTo(target, { p1:0, p4:0.08, p2:0.15, p3:0.22 });
+  loopTimer = setTimeout(() => {
+    if (!looping) return;
+    animateTo(scattered, { p3:0, p4:0.08, p1:0.15, p2:0.22 });
+    loopTimer = setTimeout(loop, totalDur + 500);
+  }, totalDur + 800);
+}
+
+document.getElementById('btnAssemble').onclick = () => {
+  looping = false; clearTimeout(loopTimer);
+  document.getElementById('btnLoop').textContent = '↺ Auto Loop';
+  document.getElementById('btnLoop').classList.remove('active');
+  const target = allShapes[shapeSelect.value] || assembled;
+  animateTo(target, { p1:0, p4:0.08, p2:0.15, p3:0.22 });
+};
+
+document.getElementById('btnScatter').onclick = () => {
+  looping = false; clearTimeout(loopTimer);
+  document.getElementById('btnLoop').textContent = '↺ Auto Loop';
+  document.getElementById('btnLoop').classList.remove('active');
+  animateTo(scattered, { p3:0, p4:0.08, p1:0.15, p2:0.22 });
+};
+
+document.getElementById('btnLoop').onclick = function() {
+  looping = !looping;
+  if (looping) {
+    this.textContent = '■ Stop';
+    this.classList.add('active');
+    loop();
+  } else {
+    this.textContent = '↺ Auto Loop';
+    this.classList.remove('active');
+    clearTimeout(loopTimer);
+  }
+};
+</script>
+</body>
+</html>
