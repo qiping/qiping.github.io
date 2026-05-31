@@ -275,14 +275,28 @@ const allShapeKeys = Object.keys(allShapes).filter(k => k !== 'scattered');
 const shuffled = allShapeKeys.sort(() => 0.5 - Math.random());
 const selectedKeys = shuffled.slice(0, 15);
 
-// Add to dropdown
-selectedKeys.sort().forEach(key => {
-    const option = document.createElement('option');
-    option.value = 'allShapes:' + key;
-    option.textContent = key.replace('shape', 'Shape ');
-    targetSelect.appendChild(option);
-});
+// Ensure 'T' is present in the list; if not, add it to the front
+if (!selectedKeys.includes('T')) {
+    selectedKeys.unshift('T');
+}
 
+// Add to dropdown with 'T' prioritized at the very top
+selectedKeys.sort((a, b) => {
+    // If 'T' is one of the shapes, force it to the front
+    if (a === 'T') return -1;
+    if (b === 'T') return 1;
+    
+    // Otherwise, perform standard alphabetical sorting
+    return a.localeCompare(b);
+}).forEach(key => {
+    const option = document.createElement('option'); // [cite: 18]
+    option.value = 'allShapes:' + key; // [cite: 18]
+    
+    // Clean display text: Use 'T' directly, or replace 'shape' with 'Shape '
+    option.textContent = key === 'T' ? 'T' : key.replace('shape', 'Shape '); // [cite: 18, 23, 24]
+    
+    targetSelect.appendChild(option); // [cite: 18]
+});
 // Helper to get points for a shape from shapes_data.js configuration
 function getPointsFromState(stateKey) {
     const state = allShapes[stateKey];
@@ -596,10 +610,154 @@ function updateTargetHint(val) {
     });
 }
 
+const solutionBtn = document.getElementById('solutionBtn');
+
 targetSelect.addEventListener('change', () => {
     const val = targetSelect.value;
     updateTargetHint(val);
     randomizeAllPieces(pieces);
+    
+    // Show/hide solution button for 'T'
+    if (val === 'allShapes:T') {
+        solutionBtn.style.display = 'inline-flex';
+    } else {
+        solutionBtn.style.display = 'none';
+        stopSolutionAnimation();
+    }
 });
+
+// Handle Solution Click & Trigger Animation Sequence
+let animationFrameId = null;
+let isAnimating = false;
+
+solutionBtn.addEventListener('click', () => {
+    if (isAnimating || solutionBtn.textContent.includes('Reset')) {
+        stopSolutionAnimation();
+        return;
+    }
+    startSolutionAnimation();
+});
+
+function startSolutionAnimation() {
+    isAnimating = true;
+    solutionBtn.textContent = '⏱️ Reset Pieces';
+    solutionBtn.style.backgroundColor = '#ea4335'; // Red to indicate reset action
+    
+    const targetState = allShapes['T'];
+    if (!targetState) {
+        isAnimating = false;
+        return;
+    }
+
+    const targetPolygons = getPointsFromState('T');
+
+    // Capture starting state
+    const startState = pieces.map(p => ({
+        x: p.x,
+        y: p.y,
+        rotation: p.rotation,
+        isFlipped: p.isFlipped
+    }));
+
+    // Calculate centering offset based on targetPolygons
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    targetPolygons.flat().forEach(p => {
+        minX = Math.min(minX, p.x);
+        maxX = Math.max(maxX, p.x);
+        minY = Math.min(minY, p.y);
+        maxY = Math.max(maxY, p.y);
+    });
+
+    const offsetX = canvas.width / 2 - (minX + maxX) / 2;
+    const offsetY = canvas.height / 2 - (minY + maxY) / 2;
+
+    // Definitions matching getPointsFromState
+    const defs = {
+        p1: { w: 320, h: 80, pts: [{x:0,y:0}, {x:104,y:0}, {x:160,y:56}, {x:0,y:56}] },
+        p2: { w: 320, h: 80, pts: [{x:0,y:0}, {x:160,y:0}, {x:118,y:42}, {x:132,y:56}, {x:56,y:56}] },
+        p3: { w: 80, h: 220, pts: [{x:0,y:0}, {x:79.2,y:0}, {x:95.6,y:16.4}, {x:56,y:56}] },
+        p4: { w: 70, h: 70, pts: [{x:0,y:0}, {x:56,y:0}, {x:56,y:56}] }
+    };
+
+    const finalState = pieces.map(p => {
+        const id = 'p' + p.id;
+        const pos = targetState[id];
+        const def = defs[id];
+
+        // 1. Calculate the original center of the piece (matching Piece constructor)
+        let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+        def.pts.forEach(pt => {
+            minX = Math.min(minX, pt.x);
+            maxX = Math.max(maxX, pt.x);
+            minY = Math.min(minY, pt.y);
+            maxY = Math.max(maxY, pt.y);
+        });
+        const centerX = (minX + maxX) / 2;
+        const centerY = (minY + maxY) / 2;
+
+        // 2. Transform this center using the exact logic from getPointsFromState
+        const cx = def.w / 2;
+        const cy = def.h / 2;
+        const rad = (pos.rotate || 0) * Math.PI / 180;
+        const sx = pos.scaleX || 1;
+
+        let px = (centerX - cx) * sx;
+        let py = (centerY - cy);
+
+        const rx = px * Math.cos(rad) - py * Math.sin(rad);
+        const ry = px * Math.sin(rad) + py * Math.cos(rad);
+
+        return {
+            x: rx + cx + pos.left + offsetX,
+            y: ry + cy + pos.top + offsetY,
+            rotation: pos.rotate || 0,
+            isFlipped: pos.scaleX === -1
+        };
+    });
+
+    let frame = 0;
+    const totalFrames = 60;
+
+    function animateLoop() {
+        if (!isAnimating) return;
+        
+        frame++;
+        const t = frame / totalFrames;
+        const ease = t * (2 - t);
+
+        pieces.forEach((p, i) => {
+            const start = startState[i];
+            const end = finalState[i];
+
+            p.x = start.x + (end.x - start.x) * ease;
+            p.y = start.y + (end.y - start.y) * ease;
+            
+            let diff = (end.rotation - start.rotation) % 360;
+            if (diff > 180) diff -= 360;
+            if (diff < -180) diff += 360;
+            p.rotation = start.rotation + diff * ease;
+
+            if (t >= 0.5) p.isFlipped = end.isFlipped;
+        });
+        
+        if (frame < totalFrames) {
+            animationFrameId = requestAnimationFrame(animateLoop);
+        } else {
+            isAnimating = false;
+        }
+    }
+    
+    animateLoop();
+}
+
+function stopSolutionAnimation() {
+    isAnimating = false;
+    if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+    }
+    solutionBtn.textContent = '💡 View Solution';
+    solutionBtn.style.backgroundColor = '#34a853';
+    randomizeAllPieces(pieces);
+}
 
 draw();

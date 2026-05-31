@@ -19,17 +19,73 @@ body {
 
 header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 header h1 {
-    margin: 0;
+    margin: 0 0 20px 0;
     color: #1a73e8;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
-header p {
+/* Modern bilingual split layout */
+.intro-container {
+    display: flex;
+    max-width: 850px;
+    margin: 0 auto;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+    text-align: left;
+    border: 1px solid #e8eaed;
+}
+
+.intro-lang {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-divider {
+    width: 1px;
+    background-color: #dadce0;
+    align-self: stretch;
+}
+
+.intro-text {
     color: #5f6368;
-    margin-top: 5px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 8px 0;
+}
+
+.intro-text:last-child {
+    margin-bottom: 0;
+}
+
+.intro-text.emphasis {
+    color: #3c4043;
+    font-weight: 500;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .intro-divider {
+        width: 100%;
+        height: 1px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
 }
 
 main {
@@ -125,4 +181,38 @@ footer {
     margin-top: 20px;
     font-size: 0.8em;
     color: #9aa0a6;
+}
+/* Container to place heading and button inline */
+.target-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.target-header-row h3 {
+    margin: 0;
+}
+
+/* Polished Solution Button Styling */
+#solutionBtn {
+    background-color: #34a853; /* Success Green */
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+#solutionBtn:hover {
+    background-color: #2b8a43;
+    transform: scale(1.05);
+}
+
+#solutionBtn:active {
+    transform: scale(0.95);
 }

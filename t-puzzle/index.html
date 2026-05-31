@@ -9,9 +9,25 @@
 <body>
     <div id="game-container">
         <header>
-            <h1>T-Puzzle Challenge</h1>
-            <p>Can you solve the "T" mystery?</p>
-        </header>
+    <h1>四巧板 &bull; T-Puzzle Challenge</h1>
+    
+    <div class="intro-container">
+        <!-- Chinese Version -->
+        <div class="intro-lang">
+            <p class="intro-text emphasis">四巧板，又称“T字之谜”。仅用四块不规则木板，即可拼组成上百种图案，而最具挑战性的正是“T”字形。</p>
+            <p class="intro-text">在游戏中锻炼空间想象力、观察分析力和逻辑判断力。挑战一下？</p>
+        </div>
+        
+        <!-- Divider Line -->
+        <div class="intro-divider"></div>
+
+        <!-- English Version -->
+        <div class="intro-lang">
+            <p class="intro-text emphasis">The <b>T-Puzzle</b> is a classic four-piece tangram. Use just four irregular pieces to form hundreds of shapes—the ultimate challenge is the letter "T".</p>
+            <p class="intro-text">Sharpen your spatial imagination, observation skills, and logical thinking. Ready for the challenge?</p>
+        </div>
+    </div>
+</header>
         
         <main>
             <div id="canvas-area">
@@ -44,11 +60,12 @@
                 </div>
 
                 <button id="resetBtn">Reset Pieces</button>
+                <button id="solutionBtn" style="display:none; background-color: #34a853; color: white; margin-top: 10px; width: 100%; padding: 12px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-family: inherit; align-items: center; justify-content: center; gap: 8px;">💡 View Solution</button>
             </aside>
         </main>
 
         <footer>
-           <p>&copy; <span id="year"></span> Qiping Yan. All rights reserved.</p>
+           <p>&copy; <span id="year"></span> Qiping Yan/小严. All rights reserved.</p>
         </footer>
 
 <script>
