@@ -234,7 +234,7 @@ const shape40 = {
 };
 const shape41 = {
   p1: { left: 330, top: 375, rotate: 0, scaleX: 1 },
-  p2: { left: 270, top: 305, rotate: 45, scaleX: -1 },
+  p2: { left: 270, top: 307, rotate: 45, scaleX: -1 },
   p3: { left: 445, top: 160, rotate: 225, scaleX: -1 },
   p4: { left: 315, top: 305, rotate: 180, scaleX: 1 }
 };
@@ -242,12 +242,12 @@ const shape42 = {
   p1: { left: 330, top: 375, rotate: 0, scaleX: 1 },
   p2: { left: 325, top: 360, rotate: 315, scaleX: -1 },
   p3: { left: 500, top: 215, rotate: 225, scaleX: -1 },
-  p4: { left: 405, top: 400, rotate: 135, scaleX: 1 }
+  p4: { left: 405, top: 398, rotate: 135, scaleX: 1 }
 };
 const shape43 = {
   p1: { left: 630, top: 440, rotate: 0, scaleX: 1 },
   p2: { left: 445, top: 385, rotate: 0, scaleX: -1 },
-  p3: { left: 555, top: 220, rotate: 180, scaleX: -1 },
+  p3: { left: 553, top: 220, rotate: 180, scaleX: -1 },
   p4: { left: 735, top: 440, rotate: 0, scaleX: 1 }
 };
 const shape44 = {
@@ -265,12 +265,12 @@ const shape45 = {
 const shape46 = {
   p1: { left: 615, top: 285, rotate: 0, scaleX: 1 },
   p2: { left: 370, top: 385, rotate: 315, scaleX: -1 },
-  p3: { left: 645, top: 340, rotate: 315, scaleX: 1 },
+  p3: { left: 645, top: 338, rotate: 315, scaleX: 1 },
   p4: { left: 500, top: 325, rotate: 270, scaleX: 1 }
 };
 const shape47 = {
   p1: { left: 615, top: 285, rotate: 270, scaleX: -1 },
-  p2: { left: 635, top: 315, rotate: 225, scaleX: -1 },
+  p2: { left: 635, top: 313, rotate: 225, scaleX: -1 },
   p3: { left: 700, top: 320, rotate: 45, scaleX: -1 },
   p4: { left: 700, top: 345, rotate: 315, scaleX: 1 }
 };
@@ -283,12 +283,12 @@ const shape48 = {
 const shape49 = {
   p1: { left: 445, top: 305, rotate: 0, scaleX: 1 },
   p2: { left: 315, top: 360, rotate: 0, scaleX: -1 },
-  p3: { left: 420, top: 200, rotate: 180, scaleX: -1 },
-  p4: { left: 415, top: 350, rotate: 270, scaleX: 1 }
+  p3: { left: 420, top: 196, rotate: 180, scaleX: -1 },
+  p4: { left: 417, top: 346, rotate: 270, scaleX: 1 }
 };
 const shape5 = {
   p1: { left: 250, top: 95, rotate: 45, scaleX: -1 },
-  p2: { left: 405, top: 240, rotate: 180, scaleX: 1 },
+  p2: { left: 405, top: 238, rotate: 180, scaleX: 1 },
   p3: { left: 510, top: 260, rotate: 0, scaleX: 1 },
   p4: { left: 525, top: 225, rotate: 315, scaleX: 1 }
 };
@@ -313,7 +313,7 @@ const shape52 = {
 const shape53 = {
   p1: { left: 235, top: 375, rotate: 0, scaleX: 1 },
   p2: { left: 175, top: 305, rotate: 45, scaleX: -1 },
-  p3: { left: 495, top: 220, rotate: 225, scaleX: -1 },
+  p3: { left: 490, top: 215, rotate: 225, scaleX: -1 },
   p4: { left: 305, top: 305, rotate: 180, scaleX: -1 }
 };
 const shape54 = {
@@ -324,7 +324,7 @@ const shape54 = {
 };
 const shape55 = {
   p1: { left: 270, top: 80, rotate: 180, scaleX: 1 },
-  p2: { left: 410, top: 150, rotate: 315, scaleX: 1 },
+  p2: { left: 410, top: 147, rotate: 315, scaleX: 1 },
   p3: { left: 475, top: 0, rotate: 135, scaleX: 1 },
   p4: { left: 470, top: 160, rotate: 0, scaleX: -1 }
 };
@@ -335,10 +335,10 @@ const shape56 = {
   p4: { left: 590, top: 200, rotate: 90, scaleX: -1 }
 };
 const shape57 = {
-  p1: { left: 380, top: 170, rotate: 0, scaleX: 1 },
+  p1: { left: 380, top: 168, rotate: 0, scaleX: 1 },
   p2: { left: 325, top: 110, rotate: 0, scaleX: 1 },
   p3: { left: 460, top: -50, rotate: 180, scaleX: 1 },
-  p4: { left: 470, top: 100, rotate: 90, scaleX: -1 }
+  p4: { left: 470, top: 96, rotate: 90, scaleX: -1 }
 };
 const shape58 = {
   p1: { left: 445, top: 235, rotate: 90, scaleX: -1 },
@@ -347,9 +347,9 @@ const shape58 = {
   p4: { left: 600, top: 285, rotate: 90, scaleX: -1 }
 };
 const shape59 = {
-  p1: { left: 495, top: 255, rotate: 270, scaleX: 1 },
+  p1: { left: 497, top: 255, rotate: 270, scaleX: 1 },
   p2: { left: 530, top: 360, rotate: 90, scaleX: 1 },
-  p3: { left: 745, top: 305, rotate: 270, scaleX: 1 },
+  p3: { left: 743, top: 305, rotate: 270, scaleX: 1 },
   p4: { left: 675, top: 385, rotate: 180, scaleX: -1 }
 };
 const shape6_1 = {
@@ -361,7 +361,7 @@ const shape6_1 = {
 const shape6 = {
   p1: { left: 325, top: 365, rotate: 0, scaleX: 1 },
   p2: { left: 430, top: 365, rotate: 0, scaleX: 1 },
-  p3: { left: 565, top: 200, rotate: 180, scaleX: 1 },
+  p3: { left: 563, top: 200, rotate: 180, scaleX: 1 },
   p4: { left: 580, top: 385, rotate: 225, scaleX: -1 }
 };
 const shape60 = {
@@ -373,13 +373,13 @@ const shape60 = {
 const shape61 = {
   p1: { left: 365, top: 410, rotate: 270, scaleX: -1 },
   p2: { left: 295, top: 345, rotate: 225, scaleX: 1 },
-  p3: { left: 390, top: 465, rotate: 45, scaleX: 1 },
+  p3: { left: 394, top: 465, rotate: 45, scaleX: 1 },
   p4: { left: 525, top: 415, rotate: 0, scaleX: -1 }
 };
 const shape62 = {
-  p1: { left: 165, top: 385, rotate: 180, scaleX: 1 },
+  p1: { left: 165, top: 383, rotate: 180, scaleX: 1 },
   p2: { left: 210, top: 325, rotate: 180, scaleX: 1 },
-  p3: { left: 420, top: 250, rotate: 135, scaleX: 1 },
+  p3: { left: 420, top: 247, rotate: 135, scaleX: 1 },
   p4: { left: 395, top: 315, rotate: 45, scaleX: -1 }
 };
 const shape63 = {
@@ -389,7 +389,7 @@ const shape63 = {
   p4: { left: 320, top: 375, rotate: 45, scaleX: -1 }
 };
 const shape64 = {
-  p1: { left: 485, top: 125, rotate: 180, scaleX: -1 },
+  p1: { left: 483, top: 125, rotate: 180, scaleX: -1 },
   p2: { left: 455, top: 180, rotate: 180, scaleX: -1 },
   p3: { left: 430, top: 205, rotate: 0, scaleX: -1 },
   p4: { left: 430, top: 135, rotate: 180, scaleX: -1 }
@@ -401,8 +401,8 @@ const shape65 = {
   p4: { left: 600, top: 295, rotate: 135, scaleX: -1 }
 };
 const shape66 = {
-  p1: { left: 435, top: 235, rotate: 0, scaleX: 1 },
-  p2: { left: 375, top: 165, rotate: 45, scaleX: -1 },
+  p1: { left: 435, top: 236, rotate: 0, scaleX: 1 },
+  p2: { left: 373, top: 165, rotate: 45, scaleX: -1 },
   p3: { left: 420, top: 230, rotate: 315, scaleX: 1 },
   p4: { left: 410, top: 165, rotate: 180, scaleX: -1 }
 };
@@ -415,7 +415,7 @@ const shape67 = {
 const shape68 = {
   p1: { left: 435, top: 235, rotate: 90, scaleX: -1 },
   p2: { left: 515, top: 210, rotate: 270, scaleX: 1 },
-  p3: { left: 700, top: 350, rotate: 315, scaleX: -1 },
+  p3: { left: 700, top: 352, rotate: 315, scaleX: -1 },
   p4: { left: 600, top: 265, rotate: 315, scaleX: -1 }
 };
 const shape69 = {
@@ -432,20 +432,20 @@ const shape7 = {
 };
 const shape70 = {
   p1: { left: 570, top: 195, rotate: 270, scaleX: 1 },
-  p2: { left: 540, top: 215, rotate: 315, scaleX: 1 },
-  p3: { left: 605, top: 70, rotate: 135, scaleX: 1 },
+  p2: { left: 538, top: 221, rotate: 315, scaleX: 1 },
+  p3: { left: 603, top: 75, rotate: 135, scaleX: 1 },
   p4: { left: 635, top: 275, rotate: 180, scaleX: -1 }
 };
 const shape71 = {
   p1: { left: 475, top: 270, rotate: 270, scaleX: 1 },
   p2: { left: 575, top: 285, rotate: 135, scaleX: -1 },
-  p3: { left: 640, top: 290, rotate: 45, scaleX: -1 },
+  p3: { left: 638, top: 290, rotate: 45, scaleX: -1 },
   p4: { left: 645, top: 435, rotate: 45, scaleX: -1 }
 };
 const shape72 = {
   p1: { left: 475, top: 270, rotate: 180, scaleX: 1 },
   p2: { left: 615, top: 350, rotate: 0, scaleX: 1 },
-  p3: { left: 750, top: 185, rotate: 180, scaleX: 1 },
+  p3: { left: 748, top: 185, rotate: 180, scaleX: 1 },
   p4: { left: 615, top: 350, rotate: 270, scaleX: -1 }
 };
 const shape73 = {
@@ -464,7 +464,7 @@ const shape75 = {
   p1: { left: 595, top: 130, rotate: 270, scaleX: 1 },
   p2: { left: 525, top: 190, rotate: 315, scaleX: -1 },
   p3: { left: 725, top: 65, rotate: 225, scaleX: 1 },
-  p4: { left: 660, top: 230, rotate: 270, scaleX: -1 }
+  p4: { left: 660, top: 228, rotate: 270, scaleX: -1 }
 };
 const shape76 = {
   p1: { left: -35, top: 185, rotate: 180, scaleX: 1 },
@@ -473,44 +473,44 @@ const shape76 = {
   p4: { left: 255, top: 140, rotate: 180, scaleX: -1 }
 };
 const shape77 = {
-  p1: { left: 230, top: 145, rotate: 90, scaleX: -1 },
-  p2: { left: 170, top: 300, rotate: 90, scaleX: 1 },
-  p3: { left: 500, top: 175, rotate: 270, scaleX: -1 },
-  p4: { left: 285, top: 310, rotate: 45, scaleX: -1 }
+  p1: { left: 230, top: 141, rotate: 90, scaleX: -1 },
+  p2: { left: 172, top: 300, rotate: 90, scaleX: 1 },
+  p3: { left: 500, top: 168, rotate: 270, scaleX: -1 },
+  p4: { left: 285, top: 306, rotate: 45, scaleX: -1 }
 };
 const shape78 = {
   p1: { left: 230, top: 145, rotate: 225, scaleX: 1 },
-  p2: { left: 360, top: 130, rotate: 90, scaleX: -1 },
-  p3: { left: 350, top: 120, rotate: 90, scaleX: -1 },
-  p4: { left: 470, top: 290, rotate: 45, scaleX: -1 }
+  p2: { left: 361, top: 130, rotate: 90, scaleX: -1 },
+  p3: { left: 353, top: 122, rotate: 90, scaleX: -1 },
+  p4: { left: 470, top: 292, rotate: 45, scaleX: -1 }
 };
 const shape79 = {
   p1: { left: 230, top: 145, rotate: 135, scaleX: -1 },
   p2: { left: 260, top: 295, rotate: 270, scaleX: -1 },
-  p3: { left: 225, top: 185, rotate: 90, scaleX: 1 },
+  p3: { left: 227, top: 187, rotate: 90, scaleX: 1 },
   p4: { left: 230, top: 280, rotate: 135, scaleX: -1 }
 };
 const shape8 = {
-  p1: { left: 185, top: 335, rotate: 135, scaleX: 1 },
+  p1: { left: 186, top: 335, rotate: 135, scaleX: 1 },
   p2: { left: 340, top: 235, rotate: 45, scaleX: -1 },
-  p3: { left: 515, top: 90, rotate: 225, scaleX: -1 },
-  p4: { left: 445, top: 215, rotate: 45, scaleX: -1 }
+  p3: { left: 517, top: 90, rotate: 225, scaleX: -1 },
+  p4: { left: 445, top: 213, rotate: 45, scaleX: -1 }
 };
 const shape80_ = {
-  p1: { left: 325, top: 425, rotate: 0, scaleX: 1 },
-  p2: { left: 240, top: 295, rotate: 225, scaleX: 1 },
+  p1: { left: 323, top: 425, rotate: 0, scaleX: 1 },
+  p2: { left: 240, top: 298, rotate: 225, scaleX: 1 },
   p3: { left: 495, top: 185, rotate: 225, scaleX: 1 },
   p4: { left: 375, top: 370, rotate: 270, scaleX: -1 }
 };
 const shape81 = {
-  p1: { left: 585, top: 320, rotate: 270, scaleX: -1 },
-  p2: { left: 610, top: 355, rotate: 225, scaleX: -1 },
+  p1: { left: 585, top: 322, rotate: 270, scaleX: -1 },
+  p2: { left: 608, top: 355, rotate: 225, scaleX: -1 },
   p3: { left: 690, top: 250, rotate: 315, scaleX: 1 },
   p4: { left: 645, top: 360, rotate: 135, scaleX: -1 }
 };
 const shape82 = {
   p1: { left: 565, top: 120, rotate: 90, scaleX: -1 },
-  p2: { left: 510, top: 280, rotate: 90, scaleX: 1 },
+  p2: { left: 507, top: 280, rotate: 90, scaleX: 1 },
   p3: { left: 720, top: 225, rotate: 270, scaleX: 1 },
   p4: { left: 695, top: 305, rotate: 90, scaleX: -1 }
 };
@@ -521,32 +521,32 @@ const shape83 = {
   p4: { left: 345, top: 260, rotate: 135, scaleX: -1 }
 };
 const shape84 = {
-  p1: { left: 220, top: 290, rotate: 0, scaleX: -1 },
+  p1: { left: 219, top: 289, rotate: 0, scaleX: -1 },
   p2: { left: 190, top: 275, rotate: 135, scaleX: 1 },
-  p3: { left: 500, top: 230, rotate: 315, scaleX: 1 },
+  p3: { left: 500, top: 226, rotate: 315, scaleX: 1 },
   p4: { left: 340, top: 230, rotate: 0, scaleX: -1 }
 };
 const shape85 = {
   p1: { left: 535, top: 90, rotate: 90, scaleX: -1 },
   p2: { left: 545, top: 220, rotate: 315, scaleX: 1 },
   p3: { left: 670, top: 130, rotate: 180, scaleX: 1 },
-  p4: { left: 680, top: 275, rotate: 90, scaleX: -1 }
+  p4: { left: 679, top: 275, rotate: 90, scaleX: -1 }
 };
 const shape86 = {
-  p1: { left: 470, top: 400, rotate: 90, scaleX: 1 },
+  p1: { left: 472, top: 400, rotate: 90, scaleX: 1 },
   p2: { left: 530, top: 270, rotate: 90, scaleX: -1 },
-  p3: { left: 680, top: 385, rotate: 315, scaleX: -1 },
-  p4: { left: 670, top: 410, rotate: 270, scaleX: -1 }
+  p3: { left: 681, top: 384, rotate: 315, scaleX: -1 },
+  p4: { left: 670, top: 412, rotate: 270, scaleX: -1 }
 };
 const shape87 = {
   p1: { left: 470, top: 400, rotate: 180, scaleX: -1 },
   p2: { left: 310, top: 345, rotate: 180, scaleX: 1 },
-  p3: { left: 415, top: 370, rotate: 0, scaleX: 1 },
+  p3: { left: 416, top: 370, rotate: 0, scaleX: 1 },
   p4: { left: 575, top: 410, rotate: 180, scaleX: -1 }
 };
 const shape88 = {
   p1: { left: 285, top: 220, rotate: 180, scaleX: 1 },
-  p2: { left: 440, top: 290, rotate: 135, scaleX: 1 },
+  p2: { left: 437, top: 288, rotate: 135, scaleX: 1 },
   p3: { left: 610, top: 295, rotate: 315, scaleX: 1 },
   p4: { left: 530, top: 300, rotate: 0, scaleX: -1 }
 };
@@ -559,41 +559,41 @@ const shape89 = {
 const shape9 = {
   p1: { left: 525, top: 110, rotate: 135, scaleX: -1 },
   p2: { left: 555, top: 95, rotate: 270, scaleX: 1 },
-  p3: { left: 580, top: 10, rotate: 90, scaleX: 1 },
-  p4: { left: 675, top: 230, rotate: 180, scaleX: -1 }
+  p3: { left: 581, top: 10, rotate: 90, scaleX: 1 },
+  p4: { left: 675, top: 229, rotate: 180, scaleX: -1 }
 };
 const shape90 = {
   p1: { left: 520, top: 260, rotate: 180, scaleX: -1 },
   p2: { left: 550, top: 240, rotate: 135, scaleX: -1 },
-  p3: { left: 590, top: 205, rotate: 225, scaleX: 1 },
-  p4: { left: 450, top: 290, rotate: 90, scaleX: -1 }
+  p3: { left: 588, top: 205, rotate: 225, scaleX: 1 },
+  p4: { left: 450, top: 292, rotate: 90, scaleX: -1 }
 };
 const shape91 = {
   p1: { left: 70, top: 205, rotate: 90, scaleX: -1 },
   p2: { left: 140, top: 345, rotate: 315, scaleX: -1 },
-  p3: { left: 395, top: 315, rotate: 315, scaleX: -1 },
+  p3: { left: 397, top: 315, rotate: 315, scaleX: -1 },
   p4: { left: 255, top: 300, rotate: 0, scaleX: -1 }
 };
 const shape92 = {
   p1: { left: 445, top: 290, rotate: 225, scaleX: 1 },
-  p2: { left: 485, top: 250, rotate: 225, scaleX: 1 },
-  p3: { left: 685, top: 235, rotate: 315, scaleX: -1 },
-  p4: { left: 605, top: 235, rotate: 0, scaleX: -1 }
+  p2: { left: 483, top: 250, rotate: 225, scaleX: 1 },
+  p3: { left: 682, top: 235, rotate: 315, scaleX: -1 },
+  p4: { left: 602, top: 236, rotate: 0, scaleX: -1 }
 };
 const shape93 = {
   p1: { left: 395, top: 295, rotate: 0, scaleX: -1 },
-  p2: { left: 490, top: 260, rotate: 270, scaleX: -1 },
+  p2: { left: 492, top: 261, rotate: 270, scaleX: -1 },
   p3: { left: 740, top: 130, rotate: 270, scaleX: -1 },
   p4: { left: 680, top: 260, rotate: 45, scaleX: -1 }
 };
 const shape94 = {
   p1: { left: 425, top: 275, rotate: 315, scaleX: -1 },
-  p2: { left: 490, top: 260, rotate: 135, scaleX: 1 },
+  p2: { left: 490, top: 258, rotate: 135, scaleX: 1 },
   p3: { left: 665, top: 265, rotate: 315, scaleX: 1 },
-  p4: { left: 685, top: 255, rotate: 180, scaleX: -1 }
+  p4: { left: 682, top: 256, rotate: 180, scaleX: -1 }
 };
 const shape95 = {
-  p1: { left: 510, top: 295, rotate: 90, scaleX: -1 },
+  p1: { left: 508, top: 295, rotate: 90, scaleX: -1 },
   p2: { left: 520, top: 265, rotate: 225, scaleX: 1 },
   p3: { left: 500, top: 240, rotate: 90, scaleX: 1 },
   p4: { left: 560, top: 360, rotate: 135, scaleX: -1 }
@@ -602,25 +602,25 @@ const shape96 = {
   p1: { left: 510, top: 295, rotate: 135, scaleX: 1 },
   p2: { left: 490, top: 170, rotate: 0, scaleX: -1 },
   p3: { left: 730, top: 175, rotate: 270, scaleX: 1 },
-  p4: { left: 690, top: 190, rotate: 225, scaleX: -1 }
+  p4: { left: 691, top: 191, rotate: 225, scaleX: -1 }
 };
 const shape97 = {
-  p1: { left: 475, top: 130, rotate: 270, scaleX: 1 },
+  p1: { left: 477, top: 130, rotate: 270, scaleX: 1 },
   p2: { left: 490, top: 170, rotate: 270, scaleX: -1 },
   p3: { left: 735, top: 35, rotate: 270, scaleX: -1 },
   p4: { left: 620, top: 165, rotate: 135, scaleX: -1 }
 };
 const shape98 = {
-  p1: { left: 425, top: 410, rotate: 90, scaleX: 1 },
+  p1: { left: 425, top: 411, rotate: 90, scaleX: 1 },
   p2: { left: 550, top: 330, rotate: 315, scaleX: 1 },
   p3: { left: 555, top: 240, rotate: 225, scaleX: -1 },
-  p4: { left: 510, top: 340, rotate: 270, scaleX: -1 }
+  p4: { left: 510, top: 341, rotate: 270, scaleX: -1 }
 };
 const shape99 = {
-  p1: { left: 425, top: 410, rotate: 315, scaleX: -1 },
+  p1: { left: 455, top: 370, rotate: 315, scaleX: -1 },
   p2: { left: 480, top: 240, rotate: 135, scaleX: -1 },
   p3: { left: 465, top: 125, rotate: 135, scaleX: -1 },
-  p4: { left: 610, top: 235, rotate: 180, scaleX: -1 }
+  p4: { left: 610, top: 236, rotate: 180, scaleX: -1 }
 };
 const shapeboat = {
   p1: { left: 360, top: 140, rotate: 180, scaleX: 1 },
@@ -656,7 +656,7 @@ const seven1 = {
 const stairs = {
   p1: { left: 369, top: 330, rotate: 0, scaleX: 1 },
   p2: { left: 284, top: 204, rotate: 225, scaleX: 1 },
-  p3: { left: 540, top: 92, rotate: 225, scaleX: 1 },
+  p3: { left: 539, top: 92, rotate: 225, scaleX: 1 },
   p4: { left: 401, top: 260, rotate: 180, scaleX: 1 }
 };
 const shape80 = {
