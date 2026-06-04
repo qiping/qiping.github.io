@@ -5,15 +5,15 @@ const diamond = {
   p4: { left: 418, top: 191, rotate: 112.5, scaleX: 1 }
 };
 const T = {
-  p1: { left: 270, top: 195, rotate: -90 },
-  p2: { left: 200, top: 225, rotate: 135 },
-  p3: { left: 275, top: 20, rotate: 135 },
-  p4: { left: 430, top: 180, rotate: 90 }
+  p1: { left: 230, top: 155, rotate: 90, scaleX: -1 },
+  p2: { left: 300, top: 185, rotate: 225, scaleX: -1 },
+  p3: { left: 460, top: -20, rotate: 225, scaleX: -1 },
+  p4: { left: 305, top: 125, rotate: 180, scaleX: 1 }
 };
 const shape100 = {
   p1: { left: 270, top: 195, rotate: -90 },
   p2: { left: 200, top: 225, rotate: 135 },
-  p3: { left: 275, top: 20, rotate: 135 },
+  p3: { left: 273, top: 20, rotate: 135 },
   p4: { left: 430, top: 180, rotate: 90 }
 };
 const shape101 = {
