@@ -127,6 +127,10 @@ canvas {
     margin-top: -5px;
 }
 
+button {
+    touch-action: manipulation; /* Prevent double-tap zoom on all buttons */
+}
+
 .action-btn {
     flex: 1;
     background-color: #5f6368;
@@ -138,6 +142,7 @@ canvas {
     font-weight: 600;
     font-size: 0.9em;
     transition: background 0.2s;
+    touch-action: manipulation;
 }
 
 .action-btn:hover {
