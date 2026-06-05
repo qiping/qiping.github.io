@@ -9,25 +9,16 @@
 <body>
     <div id="game-container">
         <header>
-    <h1>四巧板 &bull; T-Puzzle Challenge</h1>
-    
-    <div class="intro-container">
-        <!-- Chinese Version -->
-        <div class="intro-lang">
-            <p class="intro-text emphasis">四巧板，又称“T字之谜”。仅用四块不规则木板，即可拼组成上百种图案，而最具挑战性的正是“T”字形。</p>
-            <p class="intro-text">在游戏中锻炼空间想象力、观察分析力和逻辑判断力。挑战一下？</p>
-        </div>
-        
-        <!-- Divider Line -->
-        <div class="intro-divider"></div>
-
-        <!-- English Version -->
-        <div class="intro-lang">
-            <p class="intro-text emphasis">The <b>T-Puzzle</b> is a classic four-piece tangram. Use just four irregular pieces to form hundreds of shapes—the ultimate challenge is the letter "T".</p>
-            <p class="intro-text">Sharpen your spatial imagination, observation skills, and logical thinking. Ready for the challenge?</p>
-        </div>
-    </div>
-</header>
+            <div id="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="cn">中文</button>
+            </div>
+            <h1 id="ui-title">T-Puzzle Challenge</h1>
+            <div id="intro-section">
+                <p id="ui-intro-1" class="intro-text emphasis">The T-Puzzle is a classic four-piece tangram. Use just four irregular pieces to form hundreds of shapes—the ultimate challenge is the letter "T".</p>
+                <p id="ui-intro-2" class="intro-text">Sharpen your spatial imagination, observation skills, and logical thinking. Ready for the challenge?</p>
+            </div>
+        </header>
         
         <main>
             <div id="canvas-area">
@@ -37,23 +28,23 @@
             
             <aside id="controls">
                 <div class="target-selector">
-                    <h3>Select Target:</h3>
+                    <h3 id="ui-label-target">Select Target:</h3>
                     <select id="targetSelect">
-                        <option value="none">None (Free Play)</option>
+                        <option value="none" id="ui-opt-none">None (Free Play)</option>
                     </select>
                 </div>
                 
                 <div class="instructions">
-                    <h3>How to Play:</h3>
+                    <h3 id="ui-label-play">How to Play:</h3>
                     <ul>
-                        <li><strong>Drag</strong> to move pieces.</li>
-                        <li>Press <strong>'R'</strong> to rotate (22.5°) or <strong>Right-Click</strong> to Rotate (45°).</li>
-                        <li>Press <strong>'F'</strong> or <strong>Double-Click</strong> to Flip.</li>
+                        <li id="ui-li-drag"><strong>Drag</strong> to move pieces.</li>
+                        <li id="ui-li-rotate">Press <strong>'R'</strong> to rotate (22.5°) or <strong>Right-Click</strong> to Rotate (45°).</li>
+                        <li id="ui-li-flip">Press <strong>'F'</strong> or <strong>Double-Click</strong> to Flip.</li>
                     </ul>
                 </div>
 
                 <div class="target-display">
-                    <h3>Target Hint:</h3>
+                    <h3 id="ui-label-hint">Target Hint:</h3>
                     <div id="silhouette-container">
                         <p id="targetHint">Select a target from the list above. A ghost silhouette will appear on the canvas.</p>
                     </div>
@@ -65,13 +56,9 @@
         </main>
 
         <footer>
-           <p>&copy; <span id="year"></span> Qiping Yan/小严. All rights reserved.</p>
+           <p id="ui-footer">&copy; <span id="year"></span> Qiping Yan/严启平. All rights reserved.</p>
         </footer>
 
-<script>
-    // This small script automatically updates the year to 2025 (or current)
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
     </div>
     <script src="shapes_data.js"></script>
     <script src="game.js"></script>

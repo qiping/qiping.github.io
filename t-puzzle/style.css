@@ -15,46 +15,58 @@ body {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative; /* For absolute positioned switcher */
+}
+
+#lang-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+}
+
+.lang-btn {
+    background: #f0f2f5;
+    border: 1px solid #dadce0;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #5f6368;
+    transition: all 0.2s;
+}
+
+.lang-btn.active {
+    background: #1a73e8;
+    color: white;
+    border-color: #1a73e8;
 }
 
 header {
     text-align: center;
     margin-bottom: 30px;
-    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 header h1 {
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
     color: #1a73e8;
     font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: -0.5px;
 }
 
-/* Modern bilingual split layout */
-.intro-container {
-    display: flex;
+#intro-section {
     max-width: 850px;
     margin: 0 auto;
     background: #f8f9fa;
     border-radius: 10px;
     padding: 20px;
-    gap: 20px;
     text-align: left;
     border: 1px solid #e8eaed;
-}
-
-.intro-lang {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.intro-divider {
-    width: 1px;
-    background-color: #dadce0;
-    align-self: stretch;
 }
 
 .intro-text {
@@ -73,18 +85,14 @@ header h1 {
     font-weight: 500;
 }
 
-/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    .intro-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .intro-divider {
-        width: 100%;
-        height: 1px;
-    }
     header h1 {
         font-size: 1.8rem;
+    }
+    #lang-switcher {
+        position: static;
+        justify-content: center;
+        margin-bottom: 15px;
     }
 }
 
@@ -182,37 +190,25 @@ footer {
     font-size: 0.8em;
     color: #9aa0a6;
 }
-/* Container to place heading and button inline */
-.target-header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
 
-.target-header-row h3 {
-    margin: 0;
-}
-
-/* Polished Solution Button Styling */
 #solutionBtn {
-    background-color: #34a853; /* Success Green */
+    background-color: #34a853;
     color: white;
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
     border: none;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
+    font-weight: bold;
+    font-family: inherit;
+    display: none; /* Controlled by JS */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
 }
 
 #solutionBtn:hover {
-    background-color: #2b8a43;
-    transform: scale(1.05);
-}
-
-#solutionBtn:active {
-    transform: scale(0.95);
+    filter: brightness(1.1);
 }
