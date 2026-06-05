@@ -114,6 +114,9 @@ canvas {
     display: block;
     cursor: crosshair;
     touch-action: none; /* Critical for mobile dragging */
+    -webkit-touch-callout: none; /* Prevent callouts like magnifying glass */
+    -webkit-user-select: none;   /* Disable selection */
+    user-select: none;
 }
 
 #controls {

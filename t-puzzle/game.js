@@ -438,35 +438,58 @@ function updateTargetHint(val) {
 // =====================================================
 // Event Listeners
 // =====================================================
-canvas.addEventListener('pointerdown', (e) => {
+let isDragging = false;
+
+function getMousePos(e) {
     const rect = canvas.getBoundingClientRect();
-    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    return {
+        x: (e.clientX - rect.left) * scaleX,
+        y: (e.clientY - rect.top) * scaleY
+    };
+}
+
+canvas.addEventListener('pointerdown', (e) => {
+    const pos = getMousePos(e);
     selectedPiece = null;
     for (let i = pieces.length - 1; i >= 0; i--) {
-        if (pieces[i].containsPoint(mx, my)) {
+        if (pieces[i].containsPoint(pos.x, pos.y)) {
             selectedPiece = pieces[i];
-            dragOffset.x = mx - selectedPiece.x; dragOffset.y = my - selectedPiece.y;
-            pieces.splice(i, 1); pieces.push(selectedPiece);
+            isDragging = true;
+            dragOffset.x = pos.x - selectedPiece.x;
+            dragOffset.y = pos.y - selectedPiece.y;
+            
+            // Move to front
+            pieces.splice(i, 1);
+            pieces.push(selectedPiece);
+            
             canvas.setPointerCapture(e.pointerId);
             break;
         }
     }
 });
 
-window.addEventListener('pointermove', (e) => {
-    if (selectedPiece && (e.buttons & 1)) {
-        const rect = canvas.getBoundingClientRect();
-        selectedPiece.x = e.clientX - rect.left - dragOffset.x;
-        selectedPiece.y = e.clientY - rect.top - dragOffset.y;
+canvas.addEventListener('pointermove', (e) => {
+    if (isDragging && selectedPiece) {
+        const pos = getMousePos(e);
+        selectedPiece.x = pos.x - dragOffset.x;
+        selectedPiece.y = pos.y - dragOffset.y;
         selectedPiece.constrainToCanvas();
     }
 });
 
-window.addEventListener('pointerup', (e) => { 
-    if (selectedPiece) {
+canvas.addEventListener('pointerup', (e) => { 
+    if (isDragging) {
+        isDragging = false;
         checkWin();
         canvas.releasePointerCapture(e.pointerId);
     } 
+});
+
+canvas.addEventListener('pointercancel', (e) => {
+    isDragging = false;
+    if (e.pointerId) canvas.releasePointerCapture(e.pointerId);
 });
 
 canvas.addEventListener('contextmenu', (e) => {
@@ -474,7 +497,9 @@ canvas.addEventListener('contextmenu', (e) => {
     if (selectedPiece) { selectedPiece.rotate(45); checkWin(); }
 });
 
-canvas.addEventListener('dblclick', (e) => { if (selectedPiece) { selectedPiece.flip(); checkWin(); } });
+canvas.addEventListener('dblclick', (e) => { 
+    if (selectedPiece) { selectedPiece.flip(); checkWin(); } 
+});
 
 window.addEventListener('keydown', (e) => {
     if (!selectedPiece) return;
