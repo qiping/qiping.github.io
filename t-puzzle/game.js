@@ -20,11 +20,13 @@ const translations = {
         optNone: "None (Free Play)",
         labelPlay: "How to Play:",
         liDrag: "<strong>Drag</strong> to move pieces.",
-        liRotate: "Press <strong>'R'</strong> to rotate (22.5°) or <strong>Right-Click</strong> (45°).",
-        liFlip: "Press <strong>'F'</strong> or <strong>Double-Click</strong> to Flip.",
+        liRotate: "Press <strong>'R'</strong> or use <strong>Rotate</strong> button (22.5°).",
+        liFlip: "Press <strong>'F'</strong>, <strong>Double-Click</strong>, or use <strong>Flip</strong> button.",
         labelHint: "Target Hint:",
         hintDefault: "Select a target from the list above. A ghost silhouette will appear on the canvas.",
         resetBtn: "Reset Pieces",
+        rotateBtn: "Rotate",
+        flipBtn: "Flip",
         viewSolution: "💡 View Solution",
         resetSolution: "⏱️ Reset Pieces",
         winMessage: "SOLVED!",
@@ -48,16 +50,19 @@ const translations = {
         labelTarget: "选择目标：",
         optNone: "无（自由模式）",
         labelPlay: "玩法说明：",
-        liDrag: "<strong>拖拽</strong> 移动积木。",
-        liRotate: "按 <strong>'R'</strong> 键旋转 (22.5°) 或 <strong>右键点击</strong> (45°)。",
-        liFlip: "按 <strong>'F'</strong> 键或 <strong>双击</strong> 翻转。",
+        liDrag: "<strong>拖拽</strong> 移动方块。",
+        liRotate: "按 <strong>'R'</strong> 键 或使用 <strong>旋转</strong> 按钮 (22.5°)。",
+        liFlip: "按 <strong>'F'</strong> 键、<strong>双击</strong> 或使用 <strong>翻转</strong> 按钮。",
         labelHint: "目标提示：",
         hintDefault: "从上方列表选择目标，预览将在此显示。",
         resetBtn: "重置方块",
+        rotateBtn: "旋转",
+        flipBtn: "翻转",
         viewSolution: "💡 查看答案",
         resetSolution: "⏱️ 重置方块",
         winMessage: "挑战成功！",
         footer: "© {year} 严启平。保留所有权利。",
+
         shapes: {
             "T": "字母 T",
             "rectangle": "长方形",
@@ -93,6 +98,8 @@ function updateLanguage(lang) {
     }
     
     if (resetBtn) resetBtn.textContent = t.resetBtn;
+    if (document.getElementById('rotateBtn')) document.getElementById('rotateBtn').textContent = t.rotateBtn;
+    if (document.getElementById('flipBtn')) document.getElementById('flipBtn').textContent = t.flipBtn;
     if (document.getElementById('winMessage')) document.getElementById('winMessage').textContent = t.winMessage;
     
     const year = new Date().getFullYear();
@@ -431,7 +438,7 @@ function updateTargetHint(val) {
 // =====================================================
 // Event Listeners
 // =====================================================
-canvas.addEventListener('mousedown', (e) => {
+canvas.addEventListener('pointerdown', (e) => {
     const rect = canvas.getBoundingClientRect();
     const mx = e.clientX - rect.left, my = e.clientY - rect.top;
     selectedPiece = null;
@@ -440,12 +447,13 @@ canvas.addEventListener('mousedown', (e) => {
             selectedPiece = pieces[i];
             dragOffset.x = mx - selectedPiece.x; dragOffset.y = my - selectedPiece.y;
             pieces.splice(i, 1); pieces.push(selectedPiece);
+            canvas.setPointerCapture(e.pointerId);
             break;
         }
     }
 });
 
-window.addEventListener('mousemove', (e) => {
+window.addEventListener('pointermove', (e) => {
     if (selectedPiece && (e.buttons & 1)) {
         const rect = canvas.getBoundingClientRect();
         selectedPiece.x = e.clientX - rect.left - dragOffset.x;
@@ -454,7 +462,12 @@ window.addEventListener('mousemove', (e) => {
     }
 });
 
-window.addEventListener('mouseup', () => { if (selectedPiece) checkWin(); });
+window.addEventListener('pointerup', (e) => { 
+    if (selectedPiece) {
+        checkWin();
+        canvas.releasePointerCapture(e.pointerId);
+    } 
+});
 
 canvas.addEventListener('contextmenu', (e) => {
     e.preventDefault();
@@ -470,6 +483,21 @@ window.addEventListener('keydown', (e) => {
 });
 
 resetBtn.addEventListener('click', () => randomizeAllPieces(pieces));
+
+const rotateBtn = document.getElementById('rotateBtn');
+const flipBtn = document.getElementById('flipBtn');
+
+if (rotateBtn) {
+    rotateBtn.addEventListener('click', () => {
+        if (selectedPiece) { selectedPiece.rotate(22.5); checkWin(); }
+    });
+}
+
+if (flipBtn) {
+    flipBtn.addEventListener('click', () => {
+        if (selectedPiece) { selectedPiece.flip(); checkWin(); }
+    });
+}
 
 document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
