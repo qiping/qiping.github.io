@@ -629,12 +629,6 @@ const shapeboat = {
   p4: { left: 650, top: 95, rotate: 180, scaleX: -1 }
 };
 
-const assembled1 = {
-  p1: { left: 265, top: 218, rotate: 270 },
-  p2: { left: 197, top: 246, rotate: 135 },
-  p3: { left: 272, top: 41, rotate: 135 },
-  p4: { left: 429, top: 202, rotate: 90 }
-};
 const M = {
   p1: { left: 70, top: 207, rotate: 90, scaleX: -1 },
   p2: { left: 139, top: 347, rotate: 315, scaleX: -1 },
@@ -665,18 +659,7 @@ const shape80 = {
   p3: { left: 540, top: 92, rotate: 225, scaleX: 1 },
   p4: { left: 401, top: 260, rotate: 180, scaleX: 1 }
 };
-const assembled = {
-  p1: { left: 411, top: 208, rotate: 270, scaleX: -1 },
-  p2: { left: 283, top: 123, rotate: 45, scaleX: -1 },
-  p3: { left: 325, top: -24, rotate: 135, scaleX: 1 },
-  p4: { left: 401, top: 136, rotate: 90, scaleX: 1 }
-};
-const scattered = {
-  p1: { left: 330, top: 255, rotate: -5 },      // center, slightly tilted (dark arrow)
-  p2: { left: 665, top: 260, rotate: -10 },     // right side, small lime tri
-  p3: { left: 55,  top: 340, rotate: -38 },     // bottom-left, tilted stem
-  p4: { left: 415, top: 500, rotate: 18 }       // bottom-center, small dark tri
-};
+
 
 // All shapes collection
 const allShapes = {
@@ -690,6 +673,26 @@ const allShapes = {
   shape69, shape7, shape70, shape71, shape72, shape73, shape74, shape75, shape76, shape77,
   shape78, shape79, shape8, shape80_, shape81, shape82, shape83, shape84, shape85, shape86,
   shape87, shape88, shape89, shape9, shape90, shape91, shape92, shape93, shape94, shape95,
-  shape96, shape97, shape98, shape99, shapeboat, assembled1, M, seven, seven1, stairs,
-  shape80, assembled, scattered
+  shape96, shape97, shape98, shape99, shapeboat, M, seven, seven1, stairs, shape80
 };
+
+ 
+/* assembled = {
+  p1: { left: 411, top: 208, rotate: 270, scaleX: -1 },
+  p2: { left: 283, top: 123, rotate: 45, scaleX: -1 },
+  p3: { left: 325, top: -24, rotate: 135, scaleX: 1 },
+  p4: { left: 401, top: 136, rotate: 90, scaleX: 1 }
+};
+const assembled1 = {
+  p1: { left: 265, top: 218, rotate: 270 },
+  p2: { left: 197, top: 246, rotate: 135 },
+  p3: { left: 272, top: 41, rotate: 135 },
+  p4: { left: 429, top: 202, rotate: 90 }
+};
+const scattered = {
+  p1: { left: 330, top: 255, rotate: -5 },      // center, slightly tilted (dark arrow)
+  p2: { left: 665, top: 260, rotate: -10 },     // right side, small lime tri
+  p3: { left: 55,  top: 340, rotate: -38 },     // bottom-left, tilted stem
+  p4: { left: 415, top: 500, rotate: 18 }       // bottom-center, small dark tri
+};
+ */ 

@@ -38,9 +38,7 @@ const translations = {
             "number_7": "Number 7",
             "axe": "Axe",
             "diamond": "Diamond",
-            "stairs": "Stairs",
-            "volcano": "Volcano",
-            "truph": "Trapezoid"
+            "stairs": "Stairs"
         }
     },
     cn: {
@@ -70,9 +68,7 @@ const translations = {
             "number_7": "数字 7",
             "axe": "斧头",
             "diamond": "菱形",
-            "stairs": "阶梯",
-            "volcano": "火山",
-            "truph": "梯形"
+            "stairs": "阶梯"
         }
     }
 };
@@ -129,24 +125,32 @@ function updateLanguage(lang) {
     }
 }
 
+// --- Target Selection Initialization ---
+let selectedTargetKeys = [];
+
+function initializeTargetList() {
+    if (typeof allShapes === 'undefined') return;
+    
+    // Get all valid shape keys (excluding 'scattered' and 'T' for now)
+    const allKeys = Object.keys(allShapes).filter(k => k !== 'scattered' && k !== 'T');
+    
+    // Shuffle and pick 14
+    const shuffled = allKeys.sort(() => 0.5 - Math.random());
+    const random14 = shuffled.slice(0, 14);
+    
+    // Always put 'T' at the very top
+    selectedTargetKeys = ['T', ...random14.sort((a, b) => a.localeCompare(b))];
+}
+
+// Call once at startup
+initializeTargetList();
+
 function populateDropdown() {
     const t = translations[currentLang];
-    const hardcodedKeys = typeof targetSilhouettes !== 'undefined' ? Object.keys(targetSilhouettes) : [];
-    const allShapeKeys = typeof allShapes !== 'undefined' ? Object.keys(allShapes).filter(k => k !== 'scattered') : [];
     
-    const combinedKeys = Array.from(new Set([...hardcodedKeys, ...allShapeKeys]));
-    
-    combinedKeys.sort((a, b) => {
-        if (a === 't_shape' || a === 'T') return -1;
-        if (b === 't_shape' || b === 'T') return 1;
-        return a.localeCompare(b);
-    }).forEach(key => {
+    selectedTargetKeys.forEach(key => {
         const option = document.createElement('option');
-        if (allShapeKeys.includes(key)) {
-            option.value = 'allShapes:' + key;
-        } else {
-            option.value = key;
-        }
+        option.value = 'allShapes:' + key;
 
         let displayName = (t.shapes && t.shapes[key]) || key.replace('shape', 'Shape ').replace('_', ' ');
         option.textContent = displayName;
