@@ -85,20 +85,37 @@ header h1 {
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
+/* Mobile Portrait: Stack controls underneath canvas */
+@media (max-width: 768px) and (orientation: portrait) {
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     #lang-switcher {
         position: static;
         justify-content: center;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
     main {
         flex-direction: column;
+        gap: 15px;
     }
     #controls {
         width: 100%;
+        padding: 12px;
+    }
+    #game-container {
+        width: 98%;
+        padding: 10px;
+    }
+}
+
+/* Mobile Landscape or Desktop: Keep side-by-side */
+@media (min-width: 769px) or (orientation: landscape) {
+    main {
+        flex-direction: row;
+    }
+    #controls {
+        width: 250px;
     }
 }
 
