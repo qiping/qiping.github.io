@@ -94,6 +94,12 @@ header h1 {
         justify-content: center;
         margin-bottom: 15px;
     }
+    main {
+        flex-direction: column;
+    }
+    #controls {
+        width: 100%;
+    }
 }
 
 main {
@@ -112,6 +118,9 @@ main {
 
 canvas {
     display: block;
+    width: 100%;
+    height: auto;
+    max-width: 800px;
     cursor: crosshair;
     touch-action: none; /* Critical for mobile dragging */
     -webkit-touch-callout: none; /* Prevent callouts like magnifying glass */

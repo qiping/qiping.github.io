@@ -455,6 +455,7 @@ canvas.addEventListener('pointerdown', (e) => {
     selectedPiece = null;
     for (let i = pieces.length - 1; i >= 0; i--) {
         if (pieces[i].containsPoint(pos.x, pos.y)) {
+            e.preventDefault(); // Stop browser from scrolling
             selectedPiece = pieces[i];
             isDragging = true;
             dragOffset.x = pos.x - selectedPiece.x;
@@ -472,6 +473,7 @@ canvas.addEventListener('pointerdown', (e) => {
 
 canvas.addEventListener('pointermove', (e) => {
     if (isDragging && selectedPiece) {
+        e.preventDefault(); // Explicitly prevent scroll while dragging
         const pos = getMousePos(e);
         selectedPiece.x = pos.x - dragOffset.x;
         selectedPiece.y = pos.y - dragOffset.y;
